@@ -1,0 +1,222 @@
+
+#pokemonDetails {
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+
+.overlapping-image {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.overlapping-image img {
+    width: auto;
+    height: 70%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+}
+    
+#pokemonDetails .pokemon-details-item {
+    list-style: none;
+    height: 95%;
+    padding: .25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#pokemonDetails .name {
+    text-transform: capitalize;
+    text-align: start;
+    font-size: 2rem;
+    list-style: none;
+    color: #FFF;
+}
+
+#pokemonDetails .number {
+    font-size: 1rem;
+    margin-right: .25rem;
+    color: #000;
+    opacity: .3;
+    text-align: end;
+}
+
+#pokemonDetails .detail ol.types {
+    list-style: none;
+    padding: 0;
+    margin-block: auto;
+    margin-top: .2rem;
+    display: flex;
+    gap: .25rem;
+}
+
+#pokemonDetails .detail ol.types li {
+    padding: .25rem .5rem;
+    border-radius: 1rem;
+    font-size: .75rem;
+    text-transform: capitalize;
+    color: #FFF;
+    text-align: center;
+    filter: brightness(1.1);
+}
+
+#backButton.pokemon-details-button {
+    z-index: 3;
+    width: 13%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 10px;
+    flex-shrink: 0;
+    font-size: .5rem;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+
+}
+
+.hp-color .progress-bar::before {
+    background-color:red; 
+}
+
+.attack-color .progress-bar::before {
+    background-color:yellow; 
+}
+
+.defense-color .progress-bar::before {
+    background-color:blue;
+}
+
+.sp-atk-color .progress-bar::before {
+    background-color:orangered; 
+}
+
+.sp-def-color .progress-bar::before {
+    background-color:purple; 
+}
+
+.speed-color .progress-bar::before {
+    background-color: #4dbd74;
+}
+
+
+#pokemonStatsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+#pokemonStatsContainer ol {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 1rem; 
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(85%, 1fr));
+    gap: .5rem;
+}
+
+.stats li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.stats .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-style: bold;
+    font-style: oblique;
+    align-items: center;
+    
+}
+
+.stats .value {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-style: bold;
+    font-style: oblique;
+    align-items: center;
+}
+
+
+.stats .progress-bar-container {
+    flex: 1;
+    margin-left: 1rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.stats .progress-bar {
+    background-color: #3498db; 
+    height: 1.5rem; 
+}
+
+
+.progress-bar {
+    height: 1rem;
+    background-color:black;
+    border-radius: 1rem;
+    overflow:visible;
+}
+
+.progress-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    border-radius: 2rem;
+    filter: brightness(1.1);
+    justify-content: flex-end;
+}
+
+.statsTitle-container {
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+}
+
+@media screen and (min-width: 380px) {
+    #pokemonDetails {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    #pokemonDetails {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #pokemonDetails {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+
+

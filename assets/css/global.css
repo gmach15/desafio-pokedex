@@ -1,0 +1,37 @@
+
+* {
+    font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-color: #F6F8FC;
+}
+
+.content{
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    position: relative;
+    background-color: #fff;
+    
+}
+
+.content.details-visible .pokemons {
+    display: none;
+}
+
+.content.content.details-visible {
+    padding: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .content{
+        max-width: 992px;
+        width: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
